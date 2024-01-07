@@ -1,5 +1,5 @@
 import { View, ScrollView, Image } from 'react-native';
-import { Text, Card, Button, Icon } from '@rneui/themed';
+import { Text, Card, Button } from '@rneui/themed';
 import NewsCadsStyles from './news-card-styles';
 import ConfirmDialogComponent from '../confirm-dialog-component/confirm-dialog-component';
 import { useState } from 'react';
@@ -99,7 +99,7 @@ const NewsCardsComponent = () => {
                         <Text style={NewsCadsStyles.fonts}>Normal Text</Text>
                     </Card>
                     <Card containerStyle={[NewsCadsStyles.element, { marginTop: 15 }]}>
-                        <Card.Title style={NewsCadsStyles.title}>Демонстрация Popup</Card.Title>
+                        <Card.Title style={NewsCadsStyles.title}>Демонстрация картинки</Card.Title>
                         <Card.Divider style={NewsCadsStyles.divider}/>
                         <Card.Image
                             style={{ padding: 0 }}
@@ -120,21 +120,21 @@ const NewsCardsComponent = () => {
                             resizeMode="cover"
                             source={{ uri: "https://i.imgur.com/AbKYdqN.png" }}
                         />
-                        {isSubscribe &&
-                            <Text style={NewsCadsStyles.fonts} h4>
+                        {isSubscribe ?
+                            (<Text style={NewsCadsStyles.fonts} h4>
                                 Поздравляю, вы подписались на рассылку Буси!
-                            </Text>
+                            </Text>) :
+                            (<Button
+                                onPress={() => setIsVisible(true)}
+                                buttonStyle={{
+                                    borderRadius: 0,
+                                    marginLeft: 0,
+                                    marginRight: 0,
+                                    marginBottom: 0,
+                                }}
+                                title="Подписаться на фото!"
+                            />)
                         }
-                        <Button
-                            onPress={() => setIsVisible(true)}
-                            buttonStyle={{
-                                borderRadius: 0,
-                                marginLeft: 0,
-                                marginRight: 0,
-                                marginBottom: 0,
-                            }}
-                            title="Подписаться на фото!"
-                        />
                     </Card>
                 </View>
             </ScrollView>

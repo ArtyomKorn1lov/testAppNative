@@ -1,10 +1,11 @@
 import { View, Text } from "react-native";
-import PageContainer from "../../styles/styles";
+import Blocks from "../../styles/styles";
+import NewsCardsComponent from "../../components/news-card-component/news-card-component";
 
 const NewsPage = () => {
     return(
-        <View style={PageContainer.container}>
-            <Text style={{color: "#D9D9D9"}} >Страница новостей сайта!</Text>
+        <View style={Blocks.page}>
+            <NewsCardsComponent />
         </View>
     );
 };

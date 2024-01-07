@@ -3,44 +3,55 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import MainPage from '../../pages/main-page/main-page';
 import NewsPage from '../../pages/news-page/news-page';
 import ContactPage from '../../pages/contact-page/contact-page';
+import SensorsPage from '../../pages/sensors-page/sensors-page';
 
 const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
     return(
         <Tab.Navigator
-        initialRouteName='Home'
+        initialRouteName='Главная'
             screenOptions={{
                 tabBarActiveTintColor: '#e91e63',
             }}
         >
             <Tab.Screen
-                name='Home'
+                name='Главная'
                 component={MainPage}
                 options={{
-                    tabBarLabel: 'Главная',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
                       <MaterialCommunityIcons name="home" color={color} size={size} />
                     ),
                   }}
             />
             <Tab.Screen
-                name='News'
+                name='Новости'
                 component={NewsPage}
                 options={{
-                    tabBarLabel: 'Новости',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
-                      <MaterialCommunityIcons name="bell" color={color} size={size} />
+                      <MaterialCommunityIcons name="newspaper-variant" color={color} size={size} />
                     ),
                   }}
             />
             <Tab.Screen
-                name='Contact'
+                name='Контакты'
                 component={ContactPage}
                 options={{
-                    tabBarLabel: 'Контакты',
+                    tabBarLabel: '',
                     tabBarIcon: ({ color, size }) => (
-                      <MaterialCommunityIcons name="account" color={color} size={size} />
+                      <MaterialCommunityIcons name="contacts" color={color} size={size} />
+                    ),
+                  }}
+            />
+            <Tab.Screen
+                name='Сенсоры'
+                component={SensorsPage}
+                options={{
+                    tabBarLabel: '',
+                    tabBarIcon: ({ color, size }) => (
+                      <MaterialCommunityIcons name="motion-sensor" color={color} size={size} />
                     ),
                   }}
             />

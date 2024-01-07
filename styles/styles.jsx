@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-const PageContainer = StyleSheet.create({
-  container: {
+const Blocks = StyleSheet.create({
+  page: {
     flex: 1,
     backgroundColor: '#373737',
     alignItems: 'center',
@@ -10,4 +10,4 @@ const PageContainer = StyleSheet.create({
 });
 
 
-export default PageContainer;
+export default Blocks;

@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
-import PageContainer from "../../styles/styles";
+import Blocks from "../../styles/styles";
 
 const MainPage = () => {
     return(
-        <View style={PageContainer.container}>
+        <View style={Blocks.page}>
             <Text style={{color: "#D9D9D9"}} >Главная страница сайта!</Text>
         </View>
     );

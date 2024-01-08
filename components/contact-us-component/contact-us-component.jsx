@@ -131,9 +131,7 @@ const ContactUsComponent = () => {
                             value={form.name.value}
                             errorStyle={{ color: 'red' }}
                             onBlur={() => setForm({...form, name: {validator: form.name.validator, isClicked: true, value: form.name.value}})}
-                            onChange={(event) => { setForm({...form, name: {validator: form.name.validator, isClicked: form.name.isClicked, value: event.target.value}})
-                            console.log("попадание")
-                            }}
+                            onChangeText={(text) => setForm({...form, name: {validator: form.name.validator, isClicked: form.name.isClicked, value: text}})}
                             errorMessage={form.name.validator}
                         />
                         <Input
@@ -144,7 +142,7 @@ const ContactUsComponent = () => {
                             value={form.email.value}
                             placeholder='Email'
                             onBlur={() => setForm({...form, email: {validator: form.email.validator, isClicked: true, value: form.email.value}})}
-                            onChange={(event) => setForm({...form, email: {validator: form.email.validator, isClicked: form.email.isClicked, value: event.target.value}})}
+                            onChangeText={(text) => setForm({...form, email: {validator: form.email.validator, isClicked: form.email.isClicked, value: text}})}
                             errorMessage={form.email.validator}
                         />
                         <Input
@@ -156,7 +154,7 @@ const ContactUsComponent = () => {
                             maxLength={12}
                             value={form.phone.value}
                             onBlur={() => setForm({...form, phone: {validator: form.phone.validator, isClicked: true, value: form.phone.value}})}
-                            onChange={(event) => setForm({...form, phone: {validator: form.phone.validator, isClicked: form.phone.isClicked, value: event.target.value}})}
+                            onChangeText={(text) => setForm({...form, phone: {validator: form.phone.validator, isClicked: form.phone.isClicked, value: text}})}
                             errorMessage={form.phone.validator}
                         />
                         <Input
@@ -167,7 +165,7 @@ const ContactUsComponent = () => {
                             multiline
                             numberOfLines={5}
                             value={form.description.value}
-                            onChange={(event) => setForm({...form, description: {value: event.target.value}})}
+                            onChangeText={(text) => setForm({...form, description: {value: text}})}
                             placeholder='Описание'
                         />
                         <View style={{

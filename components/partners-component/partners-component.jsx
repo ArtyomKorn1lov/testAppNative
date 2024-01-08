@@ -7,32 +7,27 @@ const partnerList = [
     {
         name: 'Amy Farha',
         subtitle: 'Vice President',
-        linearGradientColors: ['#FF9800', '#F44336'],
         subIcon: "account-details"
       },
       {
         name: 'Chris Jackson',
         subtitle: 'Vice Chairman',
-        linearGradientColors: ['#3F51B5', '#2196F3'],
         subIcon: "account-group"
       },
       {
         name: 'Amanda Martin',
         subtitle: 'CEO',
-        linearGradientColors: ['#FFD600', '#FF9800'],
         subIcon: "account-details"
       },
       {
         name: 'Christy Thomas',
         avatar_url: 'https://randomuser.me/api/portraits/women/48.jpg',
         subtitle: 'Lead Developer',
-        linearGradientColors: ['#4CAF50', '#8BC34A'],
         subIcon: "account-group"
       },
       {
         name: 'Melissa Jones',
         subtitle: 'CTO',
-        linearGradientColors: ['#F44336', '#E91E63'],
         subIcon: "account-group"
       },
 ];
@@ -48,11 +43,6 @@ const PartnersComponent = () => {
                             {partnerList.map((item, key) => (
                                 <ListItem
                                     key={key}
-                                    linearGradientProps={{
-                                        colors: item.linearGradientColors,
-                                        start: [1, 0],
-                                        end: [0.2, 0],
-                                    }}
                                     containerStyle={{
                                         backgroundColor: "#222222",
                                         marginHorizontal: 16,

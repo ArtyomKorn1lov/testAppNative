@@ -1,10 +1,11 @@
 import { View, Text } from "react-native";
 import Blocks from "../../styles/styles";
+import ContactUsComponent from "../../components/contact-us-component/contact-us-component";
 
 const ContactPage = () => {
     return(
         <View style={Blocks.page}>
-            <Text style={{color: "#D9D9D9"}} >Страница контактов сайта!</Text>
+            <ContactUsComponent />
         </View>
     );
 };

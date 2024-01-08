@@ -1,24 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Switch } from '@rneui/themed';
-import { View, Text, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 
-const ToggleSwitchComponent = ({isChecked, setChecked}) => {
+const ToggleSwitchComponent = ({ isChecked, setChecked }) => {
 
     return (
-        <View style={styles.view}>
+        <View style={{
+            margin: 10,
+        }}>
             <Switch
-            color='#ff0a0a'
+                color='#ff0a0a'
                 value={isChecked}
                 onValueChange={(value) => setChecked(value)}
             />
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    view: {
-        margin: 10,
-    },
-});
 
 export default ToggleSwitchComponent;
